@@ -1,0 +1,81 @@
+.Capable {
+    background-color: #EDEFF1;
+}
+
+.CapableCol {
+    padding: 50px 8vw 0px;
+    text-align: left;
+}
+
+.HeadingOne,
+.HeadingTwo {
+    font-family: 'Nanum Gothic', sans-serif;
+    line-height: 2rem;
+}
+
+.HeadingOne {
+    color: #19293A;
+}
+
+.HeadingTwo {
+    color: #506473;
+}
+
+.CapableText {
+    color: #506473;
+} 
+
+.CapableChevron {
+    background-color: #506473;
+    padding: 2px;
+    color: #fff;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.OurProcess {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100px;
+    color: #19293A;
+}
+
+.OurProcess:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px #C0345E;  
+    width: 0;
+    color: #19293A;
+    transition: width 250ms ease-in-out;
+}
+
+.OurProcess:hover:after {
+    width: 100%;
+}
+
+.CapableList {
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.ListHeading {
+    text-transform: uppercase;
+    color: #19293A;
+}
+
+.CapableListItems {
+    list-style-type: none;
+    padding: 0;
+    color: #506473;
+}
+
+.CapableListItems>li {
+    margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 992px) {
+    .CapableCol {
+        padding: 12vw 8vw;
+    }
+}

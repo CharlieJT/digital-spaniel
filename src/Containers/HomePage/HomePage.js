@@ -1,12 +1,6 @@
 import React from 'react';
 import Index from '../../Components/Home/index';
 
-const HomePage = () => {
-    return (
-        <div>
-            <Index />
-        </div>
-    );
-}
+const HomePage = () => <Index />
 
 export default HomePage;

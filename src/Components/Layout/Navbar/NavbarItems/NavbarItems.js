@@ -22,7 +22,7 @@ const NavbarItems = ({ display, clicked, colour }) => {
             name: "Blog",
             link: "#"
         },
-        Contact: {
+        contact: {
             name: "Contact",
             link: "#"
         },

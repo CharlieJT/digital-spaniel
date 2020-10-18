@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     text-align: left;
-    padding: 200px 10vw;
+    padding: 100px 8vw 50px;
 }
 
 .UnleashPoints {
@@ -29,11 +29,16 @@
     color: #506473;
 }
 
+.UnleashText {
+    color: #506473;
+}
+
 .LetsTalk {
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
     cursor: pointer;
     width: 72px;
+    color: #19293A;
 }
 
 .LetsTalk:after {

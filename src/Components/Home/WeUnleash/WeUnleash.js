@@ -12,7 +12,7 @@ const WeUnleash = () => {
                         <p className={[classes.UnleashPoints, "mb-4"].join(' ')}>Brand, Dev, Ecom, Marketing</p>
                         <h1 className={[classes.HeadingOne, "mb-0"].join(' ')}>We unleash</h1>
                         <h1 className={[classes.HeadingTwo, "mb-0"].join(' ')}>business potential</h1>
-                        <p className="my-4">
+                        <p className={[classes.UnleashText, "my-4"].join(' ')}>
                             We create brand experiences which are memorable and distinct. Our experienced team create amd develop
                             brands with personality and resonance.
                         </p>

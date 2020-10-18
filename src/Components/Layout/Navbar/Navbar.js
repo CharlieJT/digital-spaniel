@@ -56,7 +56,8 @@ class Navbar extends Component {
                 <nav
                     style={{ 
                         top: !this.state.scrollVisible ? "-150px" : "0",
-                        backgroundColor: window.pageYOffset > 40 || !this.state.widthVisible ? "#fff" : "transparent" 
+                        backgroundColor: window.pageYOffset > 40 || !this.state.widthVisible ? "#fff" : "transparent",
+                        boxShadow: window.pageYOffset > 40 ? "1px 1px 5px #6b6b6b" : "none"
                     }} 
                     className={classes.Navbar}>
                     <Container fluid={true}>
