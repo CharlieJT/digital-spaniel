@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './SideDrawer.css';
 import NavbarItems from '../../Layout/Navbar/NavbarItems/NavbarItems';
 
-const SideDrawer = ({ sideDrawerOpen, closed }) => {
+const SideDrawer = ({ sideDrawerOpen, clicked }) => {
 
     let attachedClasses = [classes.SideDrawer, classes.Close];
     if (sideDrawerOpen) {
@@ -10,7 +10,7 @@ const SideDrawer = ({ sideDrawerOpen, closed }) => {
     }
     return (
         <div className={attachedClasses.join(' ')}>
-            <NavbarItems display="block" />
+            <NavbarItems display="block" clicked={clicked} />
         </div>
     );
 }

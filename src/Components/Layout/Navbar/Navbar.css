@@ -5,6 +5,7 @@
     top: 0;
     transition: top 0.3s;
     z-index: 200;
+    background-color: #fff;
 }
   
 .NavbarHidden {
@@ -14,4 +15,10 @@
 .NavbarLogo {
     float: left;
     transition: height .3s ease-in;
+}
+
+@media only screen and (min-width: 992px) {
+    .Navbar {
+        background-color: unset;
+    }
 }

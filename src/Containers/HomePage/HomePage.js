@@ -1,9 +1,10 @@
 import React from 'react';
+import Index from '../../Components/Home/index';
 
 const HomePage = () => {
     return (
-        <div style={{ height: "1500px" }}>
-
+        <div>
+            <Index />
         </div>
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import NavbarItem from './NavbarItem/NavbarItem';
 
-const NavbarItems = ({ display }) => {
+const NavbarItems = ({ display, clicked, colour }) => {
 
     const navbarItems = {
         // Navbar items go here including name & link 
@@ -41,7 +41,13 @@ const NavbarItems = ({ display }) => {
     return (
         <div>
             {navbarArray.map(navbarItem => (
-                <NavbarItem key={navbarItem.name} name={navbarItem.name} link={navbarItem.link} display={display}/>
+                <NavbarItem 
+                    key={navbarItem.name} 
+                    name={navbarItem.name} 
+                    link={navbarItem.link} 
+                    display={display}
+                    colour={colour}
+                    clicked={clicked}/>
             ))}
         </div>
     );

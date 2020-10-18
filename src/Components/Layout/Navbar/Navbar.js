@@ -10,63 +10,81 @@ import Backdrop from '../../UI/Backdrop/Backdrop';
 class Navbar extends Component {
     state = {
         scrollPrevPosition: window.pageYOffset,
-        visible: true,
+        widthPrevSize: window.innerWidth,
+        scrollVisible: true,
+        widthVisible: window.innerWidth > 992,
         sideDrawerOpen: false
     };
 
-  // Adds an event listener when the component is mount.
-  componentDidMount() {
-    window.addEventListener("scroll", this.scrollHandler);
-  }
+    // Adds an event listener when the component is mount.
+    componentDidMount() {
+        window.addEventListener("scroll", this.scrollHandler);
+        window.addEventListener("resize", this.widthHandler);
+    }
 
-  // Remove the event listener when the component is unmount.
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.scrollHandler);
-  }
+    // Remove the event listener when the component is unmount.
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.scrollHandler);
+        window.removeEventListener("resize", this.widthHandler);
+    }
 
-  // Hide or show the menu.
-  scrollHandler = () => {
-    const { scrollPrevPosition } = this.state;
-    const scrollCurrPosition = window.pageYOffset;
-    const visible = scrollPrevPosition > scrollCurrPosition;
-    this.setState({scrollPrevPosition: scrollCurrPosition, visible });
-  };
+    // Hide or show the menu.
+    scrollHandler = () => {
+        const { scrollPrevPosition } = this.state;
+        const scrollCurrPosition = window.pageYOffset;
+        const scrollVisible = scrollPrevPosition > scrollCurrPosition;
+        this.setState({ scrollPrevPosition: scrollCurrPosition, scrollVisible, sideDrawerOpen: false });
+    };
 
-  sideDrawerToggleHandler = () => {
-    const currentSideDrawerState = this.state.sideDrawerOpen;
-    this.setState({ sideDrawerOpen: !currentSideDrawerState });
-  }
+    sideDrawerToggleHandler = () => {
+        const currentSideDrawerState = this.state.sideDrawerOpen;
+        this.setState({ sideDrawerOpen: !currentSideDrawerState });
+    }
 
-  render() {
+    widthHandler = () => {
+        const { widthPrevSize } = this.state;
+        const widthCurrSize = window.innerWidth;
+        const widthVisible = widthPrevSize > 992;
+        this.setState({ widthPrevSize: widthCurrSize, widthVisible });
+    }
 
-    return (
-        <>
-            <Backdrop show={this.state.sideDrawerOpen} clicked={this.sideDrawerToggleHandler}/>
-            <nav style={{ top: !this.state.visible ? "-150px" : "0", backgroundColor: window.pageYOffset > 40 ? "#fff" : "transparent"  }} className={classes.Navbar}>
-                <Container fluid={true}>
-                    <Row className="d-flex align-items-center">
-                        <Col xs={6}>
-                            <img 
-                                src={DigitalSpanielLogo} 
-                                style={{ height: window.pageYOffset > 40 ? "60px" : "80px"}} 
-                                className={classes.NavbarLogo} 
-                                alt="Digital Spaniel Logo" />
-                        </Col>
-                        <Col className="d-none d-lg-block" xs={6}>
-                            <NavbarItems display="inline-block"/>
-                        </Col>
-                        <Col className="d-lg-none">
-                            <Hamburger clicked={this.sideDrawerToggleHandler} />
-                        </Col>
-                    </Row>
-                    <Row>
-                        <SideDrawer sideDrawerOpen={this.state.sideDrawerOpen}/>
-                    </Row>
-                </Container>
-            </nav>
-        </>
-    );
-  }
+    render() {
+
+        return (
+            <>
+                <Backdrop show={this.state.sideDrawerOpen} clicked={this.sideDrawerToggleHandler} />
+                <nav
+                    style={{ 
+                        top: !this.state.scrollVisible ? "-150px" : "0",
+                        backgroundColor: window.pageYOffset > 40 || !this.state.widthVisible ? "#fff" : "transparent" 
+                    }} 
+                    className={classes.Navbar}>
+                    <Container fluid={true}>
+                        <Row className="d-flex align-items-center">
+                            <Col xs={6}>
+                                <a href="/">
+                                    <img
+                                        src={DigitalSpanielLogo}
+                                        style={{ height: window.pageYOffset > 40 ? "60px" : "80px" }}
+                                        className={classes.NavbarLogo}
+                                        alt="Digital Spaniel Logo" />
+                                </a>
+                            </Col>
+                            <Col className="d-none d-lg-block" xs={6}>
+                                <NavbarItems display="inline-block" colour={window.pageYOffset > 40 || !this.state.widthVisible ? "#506473" : "#fff"} />
+                            </Col>
+                            <Col className="d-lg-none">
+                                <Hamburger clicked={this.sideDrawerToggleHandler} open={this.state.sideDrawerOpen}/>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <SideDrawer sideDrawerOpen={this.state.sideDrawerOpen} clicked={this.sideDrawerToggleHandler} />
+                        </Row>
+                    </Container>
+                </nav>
+            </>
+        );
+    }
 }
 
 export default Navbar;

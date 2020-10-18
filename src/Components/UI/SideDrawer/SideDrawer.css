@@ -5,6 +5,7 @@
     width: 100vw;
     margin-top: 10px;
     background-color: #19293A;
+    box-shadow: 1px 1px 5px #1b1b1b;
     transition: transform 400ms ease-in, opacity 400ms ease-in;
 }
 

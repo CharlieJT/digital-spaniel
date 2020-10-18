@@ -1,4 +1,4 @@
-.Hamburger{
+.Hamburger {
     cursor: pointer;
     padding: 10px;
     float: right;
@@ -6,23 +6,40 @@
     width: 50px;
 }
 
-.HamburgerIcon,
-.HamburgerIcon::before,
-.HamburgerIcon::after {
+.HamburgerIconOne,
+.HamburgerIconTwo,
+.HamburgerIconThree {
     position: relative;
     float: right;
     height: 3px;
+    border-radius: 1px;
     width: 30px;
     background-color: #4a4a4f;
+    transition: transform 300ms ease-in, width 300ms ease-in, top 300ms ease-in;
 }
 
-
-.HamburgerIcon::before {
-    content: '';
-    top: -8px;
+.HamburgerIconOneClose {
+    top: -5px;
 }
 
-.HamburgerIcon::after {
-    content: '';
+.HamburgerIconTwoClose {
+    width: 100%;
+}
+
+.HamburgerIconThreeClose {
     top: 5px;
+}
+
+.HamburgerIconOneOpen {
+    top: 1px;
+    transform: rotateZ(45deg);
+}
+
+.HamburgerIconTwoOpen {
+    width: 0;
+}
+
+.HamburgerIconThreeOpen {
+    top: -2px;
+    transform: rotateZ(-45deg);
 }

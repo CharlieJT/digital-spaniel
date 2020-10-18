@@ -4,16 +4,23 @@
     text-decoration :none;
     font-size: 1.2rem;
     max-width: 150px;
+    margin: auto;
 }
 
 .NavbarItem:after {
-  display:block;
-  content: '';
-  border-bottom: solid 2px #fff;  
-  transform: scaleX(0);  
-  transition: transform 250ms ease-in-out;
+    display: block;
+    content: '';
+    border-bottom: solid 2px #fff;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
 }
 
 .NavbarItem:hover:after {
     transform: scaleX(1);
+}
+
+@media only screen and (min-width: 992px) {
+    .NavbarItem, .NavbarItem:hover {
+        margin: 0 1.5vw;
+    }
 }
