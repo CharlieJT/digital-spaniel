@@ -1,0 +1,18 @@
+.NavbarItem, .NavbarItem:hover { 
+    color: #fff;
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration :none; 
+}
+
+.NavbarItem:after {
+  display:block;
+  content: '';
+  border-bottom: solid 2px #fff;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+.NavbarItem:hover:after {
+    transform: scaleX(1);
+}

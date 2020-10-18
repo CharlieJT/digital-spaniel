@@ -1,12 +1,17 @@
 import React from 'react';
-import './App.scss';
+import classes from './App.css';
+import Layout from './hoc/Layout/Layout';
+import HomePage from './Containers/HomePage/HomePage';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <p className="textInside">This should be green</p>
-    </div>
-  );
+const App = () => {
+	return (
+		<div className={classes.App}>
+			<Layout>
+				<HomePage />
+			</Layout>
+		</div>
+	);
 }
 
 export default App;

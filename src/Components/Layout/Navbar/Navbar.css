@@ -1,0 +1,17 @@
+.Navbar {
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    top: 0;
+    transition: top 0.3s;
+    background-color: blue;
+}
+  
+.NavbarHidden {
+    top: -150px;
+}
+
+.NavbarLogo {
+    float: left;
+    transition: height .3s ease-in;
+}
