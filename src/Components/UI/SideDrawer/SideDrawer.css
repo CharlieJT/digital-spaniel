@@ -1,0 +1,25 @@
+.SideDrawer {
+    position: absolute;
+    background-color: #fff;
+    right: 0;
+    width: 100vw;
+    margin-top: 10px;
+    background-color: #19293A;
+    transition: transform 400ms ease-in, opacity 400ms ease-in;
+}
+
+.Close {
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+.Open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+@media only screen and (min-width: 992px) {
+    .SideDrawer {
+        display: none;
+    }
+}

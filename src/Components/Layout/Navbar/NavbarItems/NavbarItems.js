@@ -1,7 +1,7 @@
 import React from 'react';
 import NavbarItem from './NavbarItem/NavbarItem';
 
-const NavbarItems = () => {
+const NavbarItems = ({ display }) => {
 
     const navbarItems = {
         // Navbar items go here including name & link 
@@ -41,7 +41,7 @@ const NavbarItems = () => {
     return (
         <div>
             {navbarArray.map(navbarItem => (
-                <NavbarItem name={navbarItem.name} link={navbarItem.link}/>
+                <NavbarItem key={navbarItem.name} name={navbarItem.name} link={navbarItem.link} display={display}/>
             ))}
         </div>
     );

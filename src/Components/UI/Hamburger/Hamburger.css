@@ -1,0 +1,28 @@
+.Hamburger{
+    cursor: pointer;
+    padding: 10px;
+    float: right;
+    height: 25px;
+    width: 50px;
+}
+
+.HamburgerIcon,
+.HamburgerIcon::before,
+.HamburgerIcon::after {
+    position: relative;
+    float: right;
+    height: 3px;
+    width: 30px;
+    background-color: #4a4a4f;
+}
+
+
+.HamburgerIcon::before {
+    content: '';
+    top: -8px;
+}
+
+.HamburgerIcon::after {
+    content: '';
+    top: 5px;
+}

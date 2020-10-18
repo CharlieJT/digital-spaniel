@@ -1,8 +1,9 @@
 .NavbarItem, .NavbarItem:hover { 
     color: #fff;
     display: inline-block;
-    margin: 0 10px;
-    text-decoration :none; 
+    text-decoration :none;
+    font-size: 1.2rem;
+    max-width: 150px;
 }
 
 .NavbarItem:after {
