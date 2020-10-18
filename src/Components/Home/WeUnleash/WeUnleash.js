@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import SpanielImage from '../../../media/images/Spaniel01_gradient.png';
-import classes from './WeUnleash.css'
+import classes from './WeUnleash.css';
 
 const WeUnleash = () => {
     return (

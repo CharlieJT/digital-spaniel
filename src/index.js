@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Favicon from 'react-favicon';
+import DigitalSpanielFavicon from './media/images/digitalSpanielFavicon.png';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Favicon url={DigitalSpanielFavicon}/>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
