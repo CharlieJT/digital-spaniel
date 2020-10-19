@@ -2,7 +2,8 @@
     position: absolute;
     background-color: #fff;
     right: 0;
-    width: 100vw;
+    left: 0;
+    width: 102vw;
     margin-top: 10px;
     background-color: #19293A;
     box-shadow: 1px 1px 5px #1b1b1b;

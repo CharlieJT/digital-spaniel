@@ -67,11 +67,14 @@
 .CapableListItems {
     list-style-type: none;
     padding: 0;
-    color: #506473;
 }
 
 .CapableListItems>li {
     margin-bottom: 12px;
+}
+
+.CapableListItems>li>a {
+    color: #506473;
 }
 
 @media only screen and (min-width: 992px) {

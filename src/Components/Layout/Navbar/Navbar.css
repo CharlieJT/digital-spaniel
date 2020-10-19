@@ -1,11 +1,11 @@
 .Navbar {
     position: fixed;
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
     top: 0;
-    transition: top 0.3s;
     z-index: 200;
     background-color: #fff;
+    transition: background-color 300ms ease-in, top 300ms ease-in;
 }
   
 .NavbarHidden {

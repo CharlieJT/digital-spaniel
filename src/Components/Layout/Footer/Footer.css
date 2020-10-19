@@ -1,0 +1,134 @@
+.Footer {
+    background-color: #EDEFF1;
+}
+
+.FooterCol {
+    padding: 50px 8vw 0px;
+    text-align: left;
+}
+
+.HeadingOne,
+.HeadingTwo {
+    font-family: 'Nanum Gothic', sans-serif;
+    line-height: 2rem;
+}
+
+.HeadingOne {
+    color: #19293A;
+}
+
+.HeadingTwo {
+    color: #506473;
+}
+
+.FooterText {
+    color: #506473;
+} 
+
+.FooterChevron {
+    background-color: #506473;
+    padding: 2px;
+    color: #fff;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.OurProcess {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    width: 72px;
+    color: #19293A;
+}
+
+.OurProcess:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px #C0345E;  
+    width: 0;
+    color: #19293A;
+    transition: width 250ms ease-in-out;
+}
+
+.OurProcess:hover:after {
+    width: 100%;
+}
+
+.FooterList {
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.ListHeading {
+    text-transform: uppercase;
+    color: #19293A;
+}
+
+.FooterListItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+.FooterListItems>li {
+    margin-bottom: 12px;
+}
+
+.FooterListItems>li>a {
+    color: #506473;
+}
+
+.LowerFooter {
+    color: #50647380;
+}
+
+.LowerFooterText {
+    text-align: center;
+}
+
+.SocialIcons {
+    font-size: 1.6rem;
+}
+
+.SocialIcons>svg {
+    margin: 0 10px;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 300ms ease-in, color 300ms ease-in;
+}
+
+.SocialIcons>svg:hover {
+    color: #fff;
+}
+
+.FacebookIcon:hover {
+    background-color: #4267B2;
+}
+
+.TwitterIcon:hover {
+    background-color: #1DA1F2;
+}
+
+.InstagramIcon:hover {
+    background: linear-gradient(45deg, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.LinkedinIcon:hover {
+    background-color: #2867B2;
+}
+
+@media only screen and (min-width: 992px) {
+    .FooterCol {
+        padding: 8vw;
+    }
+    .HeadingTwo {
+        margin-bottom: 120px;
+    }
+    .SocialIcons {
+        padding-right: 8vw;
+    }
+    .LowerFooterText {
+        text-align: left;
+        padding-left: 8vw;
+    }
+}
