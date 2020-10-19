@@ -9,8 +9,9 @@
 
 .HeadingOne,
 .HeadingTwo {
-    font-family: 'Nanum Gothic', sans-serif;
     line-height: 2rem;
+    font-weight: 600;
+    font-size: 2rem;
 }
 
 .HeadingOne {
@@ -34,7 +35,6 @@
 }
 
 .OurProcess {
-    font-family: 'Nanum Gothic', sans-serif;
     font-weight: 600;
     cursor: pointer;
     width: 100px;

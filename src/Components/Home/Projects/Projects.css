@@ -1,0 +1,26 @@
+.Projects {
+    padding: 150px 8vw 50px;
+}
+
+.HeadingOne,
+.HeadingTwo {
+    line-height: 2rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.HeadingOne {
+    color: #19293A;
+}
+
+.HeadingTwo {
+    color: #506473;
+}
+
+
+@media only screen and (min-width: 991px) {
+    .UnleashColumn {
+        padding: 8vw;
+    }
+}

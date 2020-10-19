@@ -1,0 +1,49 @@
+.ImageOverlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border-radius: 6px;
+    text-align: left;
+    opacity: 0;
+    color: #fff;
+    padding: 10px;
+    padding-bottom: 0;
+    transition: background 200ms ease-in, opacity 200ms ease-in, padding 200ms ease-in, height 200ms ease-in;
+}
+
+.ImageOverlayActive {
+    background: linear-gradient( #19293A1A, #19293A);
+    opacity: 1;
+    height: 94%;
+    padding-bottom: 20px;
+}
+
+.OverlayText {
+    font-size: .8rem;
+    margin-bottom: 20px;
+}
+
+.FullProject {
+    font-weight: 600;
+    cursor: pointer;
+    width: 80px;
+    color: #fff;
+    font-size: .8rem;
+}
+
+.FullProject:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px #fff;  
+    width: 0;
+    color: #19293A;
+    transition: width 250ms ease-in-out;
+}
+
+.FullProject:hover:after {
+    width: 100%;
+}

@@ -32,6 +32,7 @@ class Navbar extends Component {
         this.setState({ scrollPrevPosition: scrollCurrPosition, scrollVisible, sideDrawerOpen: false });
     };
 
+    // Toggle the state of the side drawer
     sideDrawerToggleHandler = () => {
         const currentSideDrawerState = this.state.sideDrawerOpen;
         this.setState({ sideDrawerOpen: !currentSideDrawerState });
