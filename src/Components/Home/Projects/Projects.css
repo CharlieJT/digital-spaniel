@@ -1,5 +1,5 @@
 :global .Projects__Projects__36TK6 ul + div {
-    background-color: #C0345E !important;
+    background-color: transparent !important;
 }
 
 .Projects {
@@ -60,5 +60,8 @@
 @media only screen and (min-width: 991px) {
     .UnleashColumn {
         padding: 8vw;
+    }
+    :global .Projects__Projects__36TK6 ul + div {
+        background-color: #C0345E !important;
     }
 }

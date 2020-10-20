@@ -13,7 +13,7 @@ class KindWordsSlider extends Component {
                 name: "Johnny B. Goode",
                 jobTitle: "CEO, Getting Things Done",
                 image: TestimonialFace1,
-                quote: "Advice and support from DigiSpan was second to none. Always willing to help and offer advice and solutions. A very good and radpid understanding of our requirements was key to this."
+                quote: "Advice and support from DigiSpan was second to none. Always willing to help and offer advice and solutions. A very good and rapid understanding of our requirements was key to this."
             },
             {
                 name: "Mary Jane",
