@@ -43,8 +43,8 @@ class KindWordsSlider extends Component {
                 {
                     breakpoint: 768,
                     settings: {
-                        arrows: false,
-                        centerMode: false,
+                        arrows: true,
+                        centerMode: true,
                         centerPadding: '40px',
                         slidesToShow: 1
                     }
@@ -53,7 +53,7 @@ class KindWordsSlider extends Component {
                     breakpoint: 992,
                     settings: {
                         arrows: false,
-                        centerMode: true,
+                        centerMode: false,
                         centerPadding: '40px',
                         slidesToShow: 2
                     }
