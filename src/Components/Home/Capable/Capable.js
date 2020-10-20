@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './Capable.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { BsChevronRight } from 'react-icons/bs';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const Capable = () => {
+
+    const [brandStrategyState, setBrandStrategyState] = useState(false)
+
+    const brandStrategyMouseOver = () => setBrandStrategyState(true);
+    const brandStrategyMouseLeave = () => setBrandStrategyState(false);
+
+    let brandStrategyClasses = [classes.CapableChevron];
+    let brandStrategyDropdownClasses = [classes.BrandStrategyDropdown];
+
+    if (brandStrategyState) {
+        brandStrategyClasses = [classes.CapableChevron, classes.CapableChevronActive];
+        brandStrategyDropdownClasses = [classes.BrandStrategyDropdown, classes.BrandStrategyActive];
+    }
+
     return (
         <Container fluid={true} className={classes.Capable}>
             <ScrollAnimation animateIn="fadeInRight" duration={1}>
@@ -24,7 +38,17 @@ const Capable = () => {
                                 <div className={classes.CapableList}>
                                     <p className={classes.ListHeading}>Brand</p>
                                     <ul className={classes.CapableListItems}>
-                                        <li><a href="/">Brand Strategy <BsChevronRight className={classes.CapableChevron}/></a></li>
+                                        <li onMouseOver={brandStrategyMouseOver} onMouseLeave={brandStrategyMouseLeave}>
+                                            <a href="/">Brand Strategy <BsChevronRight className={brandStrategyClasses.join(' ')}/>
+                                                <div className={brandStrategyDropdownClasses.join(' ')}>
+                                                    <ul>
+                                                        <li><a href="/">Brand Strategy Item</a></li>
+                                                        <li><a href="/">And Another</a></li>
+                                                        <li><a href="/">Have another</a></li>
+                                                    </ul>
+                                                </div>
+                                            </a>
+                                        </li>
                                         <li><a href="/">Logo &amp; Name</a></li>
                                         <li><a href="/">Identity &amp; Collateral</a></li>
                                     </ul>

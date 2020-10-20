@@ -27,11 +27,47 @@
 } 
 
 .CapableChevron {
+    position: relative;
     background-color: #506473;
     padding: 2px;
     color: #fff;
     border-radius: 50%;
     margin-left: 10px;
+    transition: transform 200ms ease-in;
+}
+
+.CapableChevronActive {
+    transform: rotate(90deg);
+}
+
+.BrandStrategyDropdown {
+    position: absolute;
+    background-color: #fff;
+    width: 200px;
+    height: 0px;
+    opacity: 0;
+    transition: height 200ms ease-in, opacity 200ms ease-in;
+    pointer-events: none;
+    padding: 10px;
+}
+
+.BrandStrategyDropdown>ul {
+    list-style: none;
+    padding: 0;
+}
+
+.BrandStrategyDropdown>ul>li {
+    margin-bottom: 5px;
+}
+
+.BrandStrategyDropdown>ul a {
+    color: #506473;
+}
+
+.BrandStrategyActive {
+    height: 100px;
+    opacity: 1;
+    pointer-events: all;
 }
 
 .OurProcess {
