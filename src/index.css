@@ -31,3 +31,11 @@ body {
   overflow-x: hidden;
   font-family: montserrat-regular;
 }
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}

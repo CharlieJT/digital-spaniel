@@ -1,0 +1,25 @@
+.ToTop {
+    color: white;
+    padding-top: 1.8em;
+    display: inline-block;
+    position: fixed;
+    bottom: 30px;
+    right: 45px;
+    text-decoration: none;
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    z-index: 8;
+    background-color: #00000050;
+    margin-left: -.7em;
+    border: solid .2rem white;
+    border-radius: 10em;
+    padding: 10px 5px;
+    width: 2.6rem;
+    height: 2.6rem;
+    cursor: pointer;
+}
+
+.ToTop:hover {
+    border: solid .2rem #344657;
+}

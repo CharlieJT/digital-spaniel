@@ -5,6 +5,7 @@ import HomePage from './Containers/HomePage/HomePage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import BackToTop from './Components/UI/BackToTop/BackToTop';
 
 const App = () => {
 	return (
@@ -12,6 +13,7 @@ const App = () => {
 			<Layout>
 				<HomePage />
 			</Layout>
+			<BackToTop />
 		</div>
 	);
 }

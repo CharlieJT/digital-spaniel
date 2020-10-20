@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './CaseStudies.css';
+// import classes from './CaseStudies.css';
 
 const CaseStudies = () => {
     return (
