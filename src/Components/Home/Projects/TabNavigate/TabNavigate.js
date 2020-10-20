@@ -131,6 +131,7 @@ const TabNavigate = () => {
 
     return (
         <Tabs
+            className={classes.TabsNavigate}
             tabsProps={{
                 style: {
                     textAlign: "left",

@@ -1,3 +1,7 @@
+:global .Projects__Projects__36TK6 ul + div {
+    background-color: #C0345E !important;
+}
+
 .Projects {
     padding: 150px 8vw 50px;
 }

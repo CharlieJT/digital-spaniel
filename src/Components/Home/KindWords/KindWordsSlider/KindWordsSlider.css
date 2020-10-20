@@ -7,6 +7,15 @@
     z-index: 10; 
 }
 
+:global .slick-dots li button:before {
+    font-size: 14px;
+    transition: font-size 200ms ease-in;
+}
+
+:global .slick-dots .slick-active button:before {
+    font-size: 20px;
+}
+
 .TestimonialItem {
     padding: 30px 0;
 }
