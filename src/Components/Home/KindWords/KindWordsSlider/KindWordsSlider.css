@@ -1,3 +1,10 @@
+:global .slick-center .KindWordsSlider__TestimonialCard__1vm7p {
+    background-color: #19293A;
+    color: #fff;
+    transform: scale(1.05);
+    transition: background-color 200ms ease-in, color 200ms ease-in, transform 200ms ease-in;
+ }
+
 .TestimonialItem {
     padding: 10px;
 }

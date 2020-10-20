@@ -3,6 +3,7 @@ import classes from './Projects.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import TabNavigate from './TabNavigate/TabNavigate';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
 const Projects = () => {
     return (
@@ -14,9 +15,18 @@ const Projects = () => {
                         <h1 className={[classes.HeadingTwo, "mb-0"].join(' ')}>Recent Projects</h1>
                     </Col>
                 </Row>
-                <Row>
+                <Row className="mb-4">
                     <Col>
                         <TabNavigate/>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col className="d-flex justify-content-between">
+                        <p className={classes.SeeAllWork}>See all work</p>
+                        <div className={classes.ChevronContainer}>
+                            <BsChevronLeft className={classes.ChevronIcon}/>
+                            <BsChevronRight className={classes.ChevronIcon}/>
+                        </div>
                     </Col>
                 </Row>
             </ScrollAnimation>

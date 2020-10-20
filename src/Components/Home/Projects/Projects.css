@@ -18,6 +18,40 @@
     color: #506473;
 }
 
+.SeeAllWork {
+    font-weight: 600;
+    cursor: pointer;
+    width: 100px;
+    color: #19293A;
+}
+
+.SeeAllWork:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px #C0345E;  
+    width: 0;  
+    transition: width 250ms ease-in-out;
+}
+
+.SeeAllWork:hover:after {
+    width: 100%;
+}
+
+.ChevronIcon {
+    background-color: #50647380;
+    color: #506473;
+    height: 40px;
+    width: 35px;
+    padding: 6px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 120ms ease-in, color 120ms ease-in;
+}
+
+.ChevronIcon:hover {
+    background-color: #19293A;
+    color: #fff;
+}
 
 @media only screen and (min-width: 991px) {
     .UnleashColumn {

@@ -1,0 +1,17 @@
+.CaseStudies {
+    padding: 150px 8vw 50px;
+}
+
+.HeadingOne {
+    line-height: 2rem;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #19293A;
+}
+
+.CaseStudiesText {
+    color: #506473;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}

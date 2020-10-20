@@ -63,7 +63,7 @@ class KindWordsSlider extends Component {
 
         return (
             <div>
-                <Slider {...settings}>
+                <Slider className={[classes.Slider, classes.active].join(' ')} {...settings}>
                     {this.state.testimonial.map(testimonialItem => (
                         <div key={testimonialItem.name} className={classes.TestimonialItem}>
                             <div className={classes.TestimonialCard}>
