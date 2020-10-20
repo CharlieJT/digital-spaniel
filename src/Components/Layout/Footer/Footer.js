@@ -48,7 +48,7 @@ const Footer = () => {
                     </Row>
                 </Col>
             </Row>
-            <Row className={[classes.LowerFooter, "mb-2"].join(' ')}>
+            <Row className={[classes.LowerFooter, "pb-2"].join(' ')}>
                 <Col xs={12} lg={6} className={classes.LowerFooterText}>
                     <p>Copyright &copy; Digital Spaniel 2019. All rights reserved.</p>
                 </Col>

@@ -7,13 +7,14 @@ import MakeIdeasHappen from '../../../../media/images/newspaper02.png';
 import TescosFinest from '../../../../media/images/makerek.png';
 import Dinamo from '../../../../media/images/newspaper.png';
 import Rider from '../../../../media/images/rider01.png';
+import Aux from '../../../../hoc/ReactAux';
 
 const TabNavigate = () => {
+
     // Create state true or false for each project when hovered over (setting to true on mouse enter & false on mouse leave), classes are then 
     // created & active state is apended to the class name depending on if a specific state is true or false
 
-    // If I had more time with this one, I would have made state more dynatic & perhaps kept each item in state & created a category for each &
-    // mapped through each item & only showing items of a specific category in their respective category.
+    // If I had more time with this one, I would have made state management more dynatic.
 
     const [ whelliesHoverState, setWhelliesHoverState ] = useState(false);
     const [ makeIdeasHappenHoverState, setMakeIdeasHappenHoverState ] = useState(false);
@@ -63,11 +64,76 @@ const TabNavigate = () => {
         riderClass = [classes.ImageOverlay, classes.ImageOverlayActive];
     }
 
+    // Data held for each project item in the tabs section
+
+    const tabsNavigateData = [
+        {
+            title: "Whellies",
+            xsDisplay: 12,
+            smDisplay: 6,
+            lgDisplay: 4,
+            mouseEnter: whelliesHoverOver,
+            mouseLeave: whelliesHoverLeave,
+            tabClass: whelliesClass,
+            image: Whellies,
+            overlayText: "The place to go for the best whellies, come &amp; see for yourself",
+            category: "Web Design"
+        },
+        {
+            title: "Make Ideas Happen",
+            xsDisplay: 12,
+            smDisplay: 6,
+            lgDisplay: 4,
+            mouseEnter: makeIdeasHappenHoverOver,
+            mouseLeave: makeIdeasHappenHoverLeave,
+            tabClass: makeIdeasHappenClass,
+            image: MakeIdeasHappen,
+            overlayText: "A local paper with big ideas needed a sharp new brand to inspire",
+            category: "Digital Marketing"
+        },
+        {
+            title: "Tescos Finest",
+            xsDisplay: 12,
+            smDisplay: 6,
+            lgDisplay: 4,
+            mouseEnter: tescosFinestHoverOver,
+            mouseLeave: tescosFinestHoverLeave,
+            tabClass: tescosFinestClass,
+            image: TescosFinest,
+            overlayText: "Tescos only delivers the best quality products at the right price",
+            category: "Branding"
+        },
+        {
+            title: "Dinamo",
+            xsDisplay: 12,
+            smDisplay: 12,
+            lgDisplay: 8,
+            mouseEnter: dinamoHoverOver,
+            mouseLeave: dinamoHoverLeave,
+            tabClass: dinamoClass,
+            image: Dinamo,
+            overlayText: "I've never heard of Dinamo before so this is just example text",
+            category: "Web Design"
+        },
+        {
+            title: "Rider",
+            xsDisplay: 12,
+            smDisplay: 6,
+            lgDisplay: 4,
+            mouseEnter: riderHoverOver,
+            mouseLeave: riderHoverLeave,
+            tabClass: riderClass,
+            image: Rider,
+            overlayText: "A cartoon guy riding a mini bike. Again, example text",
+            category: "Digital Marketing"
+        },
+    ]
+
     return (
         <Tabs
             tabsProps={{
                 style: {
-                    textAlign: "left"
+                textAlign: "left"
                 }
             }}
             activeTab={{
@@ -78,66 +144,30 @@ const TabNavigate = () => {
                 <div style={{ padding: 10 }}>
                     <Container>
                         <Row>
-                            <Col xs={12} sm={6} lg={4} className="my-2 p-2" onMouseEnter={whelliesHoverOver} onMouseLeave={whelliesHoverLeave}>
-                                <div className="m-0 p-0">
-                                    <div className={whelliesClass.join(' ')}>
-                                        <div className={classes.OverlayContent}>
-                                            <h5>Whellies</h5>
-                                            <p className={classes.OverlayText}>The place to go for the best whellies, come &amp; see for yourself</p>
-                                            <p className={classes.FullProject}>Full Project</p>
+                            {tabsNavigateData.map(TabDataItem => {
+                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image } = TabDataItem;
+                                return (
+                                    <Col
+                                        key={title}
+                                        xs={xsDisplay} 
+                                        sm={smDisplay} 
+                                        lg={lgDisplay} 
+                                        className="my-2 p-2" 
+                                        onMouseEnter={mouseEnter} 
+                                        onMouseLeave={mouseLeave}>
+                                        <div className="m-0 p-0">
+                                            <div className={tabClass.join(' ')}>
+                                                <div className={classes.OverlayContent}>
+                                                    <h5>{title}</h5>
+                                                    <p className={classes.OverlayText}>{overlayText}</p>
+                                                    <p className={classes.FullProject}>Full Project</p>
+                                                </div>
+                                            </div>
+                                            <img src={image} className="w-100 m-0 p-0" alt={title} />
                                         </div>
-                                    </div>
-                                    <img src={Whellies} className="w-100 m-0 p-0" alt="Whellies" />
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={6} lg={4} className="my-2 p-2" onMouseEnter={makeIdeasHappenHoverOver} onMouseLeave={makeIdeasHappenHoverLeave}>
-                                <div className="m-0 p-0">
-                                    <div className={makeIdeasHappenClass.join(' ')}>
-                                        <div className={classes.OverlayContent}>
-                                            <h5>Make Ideas Happen</h5>
-                                            <p className={classes.OverlayText}>A local paper with big ideas needed a sharp new brand to inspire</p>
-                                            <p className={classes.FullProject}>Full Project</p>
-                                        </div>
-                                    </div>
-                                    <img src={MakeIdeasHappen} className="w-100 m-0 p-0" alt="Make Ideas Happen" />
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={6} lg={4} className="my-2 p-2" onMouseEnter={tescosFinestHoverOver} onMouseLeave={tescosFinestHoverLeave}>
-                                <div className="m-0 p-0">
-                                    <div className={tescosFinestClass.join(' ')}>
-                                        <div className={classes.OverlayContent}>
-                                            <h5>Tescos Finest</h5>
-                                            <p className={classes.OverlayText}>Tescos only delivers the best quality products at the right price</p>
-                                            <p className={classes.FullProject}>Full Project</p>
-                                        </div>
-                                    </div>
-                                    <img src={TescosFinest} className="w-100 m-0 p-0" alt="Tescos Finest" />
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={12} lg={8} className="my-2 p-2" onMouseEnter={dinamoHoverOver} onMouseLeave={dinamoHoverLeave}>
-                                <div className="m-0 p-0">
-                                    <div className={dinamoClass.join(' ')}>
-                                        <div className={classes.OverlayContent}>
-                                            <h5>Dinamo</h5>
-                                            <p className={classes.OverlayText}>I've never heard of Dinamo before so this is just example text</p>
-                                            <p className={classes.FullProject}>Full Project</p>
-                                        </div>
-                                    </div>
-                                    <img src={Dinamo} className="w-100 m-0 p-0" alt="Dinamo" />
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={6} lg={4} className="my-2 p-2" onMouseEnter={riderHoverOver} onMouseLeave={riderHoverLeave}>
-                                <div className="m-0 p-0">
-                                    <div className={riderClass.join(' ')}>
-                                        <div className={classes.OverlayContent}>
-                                            <h5>Rider</h5>
-                                            <p className={classes.OverlayText}>A cartoon guy riding a mini bike. Again, example text</p>
-                                            <p className={classes.FullProject}>Full Project</p>
-                                        </div>
-                                    </div>
-                                    <img src={Rider} className="w-100 m-0 p-0" alt="Rider" />
-                                </div>
-                            </Col>
+                                    </Col>
+                                );
+                            })}
                         </Row>
                     </Container>
                 </div>
@@ -146,18 +176,33 @@ const TabNavigate = () => {
                 <div style={{ padding: 10 }}>
                 <Container>
                         <Row>
-                            <Col xs={12} sm={6} lg={4} className="my-2 p-2" onMouseEnter={tescosFinestHoverOver} onMouseLeave={tescosFinestHoverLeave}>
-                                <div className="m-0 p-0">
-                                    <div className={tescosFinestClass.join(' ')}>
-                                        <div className={classes.OverlayContent}>
-                                            <h5>Tescos Finest</h5>
-                                            <p className={classes.OverlayText}>Tescos only delivers the best quality products at the right price</p>
-                                            <p className={classes.FullProject}>Full Project</p>
-                                        </div>
-                                    </div>
-                                    <img src={TescosFinest} className="w-100 m-0 p-0" alt="Tescos Finest" />
-                                </div>
-                            </Col>
+                            {tabsNavigateData.map(TabDataItem => {
+                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image, category } = TabDataItem;
+                                return (
+                                    <Aux key={title}>
+                                        {category === "Branding" ?
+                                        <Col
+                                            key={title}
+                                            xs={xsDisplay} 
+                                            sm={smDisplay} 
+                                            lg={lgDisplay} 
+                                            className="my-2 p-2" 
+                                            onMouseEnter={mouseEnter} 
+                                            onMouseLeave={mouseLeave}>
+                                            <div className="m-0 p-0">
+                                                <div className={tabClass.join(' ')}>
+                                                    <div className={classes.OverlayContent}>
+                                                        <h5>{title}</h5>
+                                                        <p className={classes.OverlayText}>{overlayText}</p>
+                                                        <p className={classes.FullProject}>Full Project</p>
+                                                    </div>
+                                                </div>
+                                                <img src={image} className="w-100 m-0 p-0" alt={title} />
+                                            </div>
+                                        </Col> : null}
+                                    </Aux>
+                                    )
+                                })}
                         </Row>
                     </Container>
                 </div>
@@ -166,30 +211,33 @@ const TabNavigate = () => {
                 <div style={{ padding: 10 }}>
                     <Container>
                         <Row>
-                            <Col xs={12} sm={6} lg={4} className="my-2 p-2" onMouseEnter={tescosFinestHoverOver} onMouseLeave={tescosFinestHoverLeave}>
-                                <div className="m-0 p-0">
-                                    <div className={tescosFinestClass.join(' ')}>
-                                        <div className={classes.OverlayContent}>
-                                            <h5>Tescos Finest</h5>
-                                            <p className={classes.OverlayText}>Tescos only delivers the best quality products at the right price</p>
-                                            <p className={classes.FullProject}>Full Project</p>
-                                        </div>
-                                    </div>
-                                    <img src={TescosFinest} className="w-100 m-0 p-0" alt="Tescos Finest" />
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={12} lg={8} className="my-2 p-2" onMouseEnter={dinamoHoverOver} onMouseLeave={dinamoHoverLeave}>
-                                <div className="m-0 p-0">
-                                    <div className={dinamoClass.join(' ')}>
-                                        <div className={classes.OverlayContent}>
-                                            <h5>Dinamo</h5>
-                                            <p className={classes.OverlayText}>I've never heard of Dinamo before so this is just example text</p>
-                                            <p className={classes.FullProject}>Full Project</p>
-                                        </div>
-                                    </div>
-                                    <img src={Dinamo} className="w-100 m-0 p-0" alt="Dinamo" />
-                                </div>
-                            </Col>
+                            {tabsNavigateData.map(TabDataItem => {
+                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image, category } = TabDataItem;
+                                return (
+                                    <Aux key={title}>
+                                        {category === "Web Design" ?
+                                        <Col
+                                            key={title}
+                                            xs={xsDisplay} 
+                                            sm={smDisplay} 
+                                            lg={lgDisplay} 
+                                            className="my-2 p-2" 
+                                            onMouseEnter={mouseEnter} 
+                                            onMouseLeave={mouseLeave}>
+                                            <div className="m-0 p-0">
+                                                <div className={tabClass.join(' ')}>
+                                                    <div className={classes.OverlayContent}>
+                                                        <h5>{title}</h5>
+                                                        <p className={classes.OverlayText}>{overlayText}</p>
+                                                        <p className={classes.FullProject}>Full Project</p>
+                                                    </div>
+                                                </div>
+                                                <img src={image} className="w-100 m-0 p-0" alt={title} />
+                                            </div>
+                                        </Col> : null}
+                                    </Aux>
+                                );
+                            })}
                         </Row>
                     </Container>
                 </div>
@@ -198,30 +246,33 @@ const TabNavigate = () => {
                 <div style={{ padding: 10 }}>
                     <Container>
                         <Row>
-                            <Col xs={12} sm={6} lg={4} className="my-2 p-2" onMouseEnter={makeIdeasHappenHoverOver} onMouseLeave={makeIdeasHappenHoverLeave}>
-                                <div className="m-0 p-0">
-                                    <div className={makeIdeasHappenClass.join(' ')}>
-                                        <div className={classes.OverlayContent}>
-                                            <h5>Make Ideas Happen</h5>
-                                            <p className={classes.OverlayText}>A local paper with big ideas needed a sharp new brand to inspire</p>
-                                            <p className={classes.FullProject}>Full Project</p>
-                                        </div>
-                                    </div>
-                                    <img src={MakeIdeasHappen} className="w-100 m-0 p-0" alt="Make Ideas Happen" />
-                                </div>
-                            </Col>
-                            <Col xs={12} sm={6} lg={4} className="my-2 p-2" onMouseEnter={riderHoverOver} onMouseLeave={riderHoverLeave}>
-                                <div className="m-0 p-0">
-                                    <div className={riderClass.join(' ')}>
-                                        <div className={classes.OverlayContent}>
-                                            <h5>Rider</h5>
-                                            <p className={classes.OverlayText}>A cartoon guy riding a mini bike. Again, example text</p>
-                                            <p className={classes.FullProject}>Full Project</p>
-                                        </div>
-                                    </div>
-                                    <img src={Rider} className="w-100 m-0 p-0" alt="Rider" />
-                                </div>
-                            </Col>
+                            {tabsNavigateData.map(TabDataItem => {
+                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image, category } = TabDataItem;
+                                return (
+                                    <Aux key={title}>
+                                        {category === "Digital Marketing" ?
+                                        <Col
+                                            key={title}
+                                            xs={xsDisplay} 
+                                            sm={smDisplay} 
+                                            lg={lgDisplay} 
+                                            className="my-2 p-2" 
+                                            onMouseEnter={mouseEnter} 
+                                            onMouseLeave={mouseLeave}>
+                                            <div className="m-0 p-0">
+                                                <div className={tabClass.join(' ')}>
+                                                    <div className={classes.OverlayContent}>
+                                                        <h5>{title}</h5>
+                                                        <p className={classes.OverlayText}>{overlayText}</p>
+                                                        <p className={classes.FullProject}>Full Project</p>
+                                                    </div>
+                                                </div>
+                                                <img src={image} className="w-100 m-0 p-0" alt={title} />
+                                            </div>
+                                        </Col> : null}
+                                    </Aux>
+                                );
+                            })}
                         </Row>
                     </Container>
                 </div>
