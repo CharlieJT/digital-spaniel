@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import SpanielImage from '../../../media/images/Spaniel01_gradient.png';
+import SpanielImage from '../../../media/images/Spaniel01_gradient@2x.png';
 import classes from './WeUnleash.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 

@@ -1,0 +1,33 @@
+.KindWords {
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.KindWordsColumn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 150px 8vw 50px;
+}
+
+.HeadingOne,
+.HeadingTwo {
+    line-height: 2rem;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.HeadingOne {
+    color: #19293A;
+}
+
+.HeadingTwo {
+    color: #506473;
+}
+
+@media only screen and (min-width: 991px) {
+    .KindWordsColumn {
+        padding: 8vw;
+    }
+}

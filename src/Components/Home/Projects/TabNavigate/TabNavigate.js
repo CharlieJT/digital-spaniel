@@ -133,14 +133,14 @@ const TabNavigate = () => {
         <Tabs
             tabsProps={{
                 style: {
-                textAlign: "left"
+                    textAlign: "left",
                 }
             }}
             activeTab={{
                 id: "all"
             }}
         >
-            <Tabs.Tab id="all" title="All">
+            <Tabs.Tab id="all" title="All" >
                 <div style={{ padding: 10 }}>
                     <Container>
                         <Row>

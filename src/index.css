@@ -1,3 +1,5 @@
+
+
 @font-face {
   font-family: 'montserrat-regular';
   src: url(fonts/Montserrat-Regular.ttf)
@@ -17,6 +19,10 @@
   font-family: 'montserrat-light';
   src: url(fonts/Montserrat-Light.ttf)
 }
+
+/* Carousel */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 html,
 body {
