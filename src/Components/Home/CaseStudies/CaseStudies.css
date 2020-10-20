@@ -2,6 +2,20 @@
     padding: 150px 8vw 50px;
 }
 
+.Lab,
+.Socks {
+    position: absolute;
+    width: 150px;
+}
+
+.Lab {
+    left:0;
+}
+
+.Socks {
+    right:0;
+}
+
 .HeadingOne {
     line-height: 2rem;
     font-weight: 600;

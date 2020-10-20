@@ -1,19 +1,24 @@
 import React from 'react';
 import classes from './CaseStudies.css';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Container, Row, Col } from 'react-bootstrap';
+import CaseStudiesSlider from './CaseStudiesSlider/CaseStudiesSlider';
 
 const CaseStudies = () => {
     return (
         <ScrollAnimation animateIn="fadeInRight" duration={1}>
-            <div className={classes.CaseStudies}>
-                <h1 className={[classes.HeadingOne, "mb-0"].join(' ')}>Case Studies</h1>
-                <p className={[classes.CaseStudiesText, "my-4 mx-auto"].join(' ')}>
-                    We create brand experiences which are memorable and distinct. Our experienced team create amd develop
-                    brands with personality and resonance.
-                </p>
-            </div>
+            <Container fluid={true} className={classes.CaseStudies}>
+                <Row className="mb-5">
+                    <Col>
+                        <h1 className={[classes.HeadingOne, "mb-0"].join(' ')}>Case Studies</h1>
+                        <p className={[classes.CaseStudiesText, "my-4 mx-auto"].join(' ')}>
+                            Every project is different. We like to work collaboratively with our clients, tailering each project to suit the needs of your and your business.
+                        </p>
+                    </Col>
+                </Row>
+                <CaseStudiesSlider />
+            </Container>
         </ScrollAnimation>
-        
     );
 }
 
