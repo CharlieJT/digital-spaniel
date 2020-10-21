@@ -45,7 +45,7 @@ class Navbar extends Component {
                 <Backdrop show={this.state.sideDrawerOpen} clicked={this.sideDrawerToggleHandler} />
                 <nav
                     style={{ 
-                        top: this.state.scrollVisible ? "0" : "-150px",
+                        top: this.state.scrollVisible || window.pageYOffset <= 40 ? "0" : "-150px",
                         backgroundColor: window.pageYOffset > 40 || window.innerWidth < 992 ? "#fff" : "transparent",
                         boxShadow: window.pageYOffset > 40 ? "1px 1px 5px #6b6b6b" : "none"
                     }} 
