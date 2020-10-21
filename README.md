@@ -6,7 +6,7 @@ The application can be found at [https://digital-spaniel-charlie-jt.netlify.app/
 
 - [**Overview**](#overview)
 - [**Navbar**](#navbar)
-- [**Unleash Section**](#unleash-section)
+- [**We unleash business potential**](#we-unleash-business-potential)
 - [**What are we capable of**](#what-are-we-capable-of)
 - [**Some of our recent projects**](#some-of-our-recent-projects)
 - [**Case Studies**](#case-studies)
@@ -33,7 +33,7 @@ The mobile display shows a hamburger icon that will toggle & off & change the CS
 The desktop display shows nav items on the right-hand side & a white underline will also animate outwards when nav items are hovered over when the navbar is at the top of the page.
 
 
-## Unleash Section
+## We unleash business potential
 
 The Unleash text will slide in when a user is presented with the website, This will show different coloured text & an active state on "Let's talk" which will animate a pink underline when hovered over. On the other side is a picture of a spaniel. Each of the two parts will be one of top of the other on a mobile & tablet display & side by side on a desktop display.
 
