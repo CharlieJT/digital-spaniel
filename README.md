@@ -5,7 +5,7 @@ The project is built with React using ES6 Javascript.
 The application can be found at [https://digital-spaniel-charlie-jt.netlify.app/](https://digital-spaniel-charlie-jt.netlify.app/)
 
 - [**Overview**](#overview)
-- [**Navbar**](#using-myweather)
+- [**Navbar**](#navbar)
 - [**Unleash Section**](#unleash-section)
 - [**What are we capable of**](#what-are-we-capable-of)
 - [**Some of our recent projects**](#some-of-our-recent-projects)
