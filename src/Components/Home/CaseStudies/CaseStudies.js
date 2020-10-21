@@ -6,7 +6,7 @@ import CaseStudiesSlider from './CaseStudiesSlider/CaseStudiesSlider';
 
 const CaseStudies = () => {
     return (
-        <ScrollAnimation animateIn="fadeInRight" duration={1}>
+        <ScrollAnimation animateIn="fadeInRight" duration={1} animateOnce={true}>
             <Container fluid={true} className={classes.CaseStudies}>
                 <Row className="mb-5">
                     <Col>

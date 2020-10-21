@@ -21,7 +21,7 @@ const Capable = () => {
 
     return (
         <Container fluid={true} className={classes.Capable}>
-            <ScrollAnimation animateIn="fadeInRight" duration={1}>
+            <ScrollAnimation animateIn="fadeInRight" duration={1} animateOnce={true}>
                 <Row>
                     <Col xs={12} lg={5} className={classes.CapableCol}>
                         <h1 className={[classes.HeadingOne, "mb-0"].join(' ')}>What are</h1>

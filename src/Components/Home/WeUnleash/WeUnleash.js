@@ -9,7 +9,7 @@ const WeUnleash = () => {
         <Container fluid={true} className={classes.WeUnleash}>
             <Row>
                 <Col className={classes.UnleashColumn} xs={12} lg={6}>
-                    <ScrollAnimation animateIn="fadeInLeft" duration={1}>
+                    <ScrollAnimation animateIn="fadeInLeft" duration={1} animateOnce={true}>
                         <div>
                             <p className={[classes.UnleashPoints, "mb-4"].join(' ')}>Brand, Dev, Ecom, Marketing</p>
                             <h1 className={[classes.HeadingOne, "mb-0"].join(' ')}>We unleash</h1>

@@ -8,7 +8,7 @@ import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 const Projects = () => {
     return (
         <Container className={classes.Projects}>
-            <ScrollAnimation animateIn="fadeInLeft" duration={1}>
+            <ScrollAnimation animateIn="fadeInLeft" duration={1} animateOnce={true}>
                 <Row className="my-4">
                     <Col>
                         <h1 className={[classes.HeadingOne, "mb-0"].join(' ')}>Some of our</h1>

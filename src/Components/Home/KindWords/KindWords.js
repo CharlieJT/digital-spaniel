@@ -7,7 +7,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 const KindWords = () => {
     return (
         <Container fluid={true} className={classes.KindWords}>
-            <ScrollAnimation animateIn="fadeInRight" duration={1}>
+            <ScrollAnimation animateIn="fadeInRight" duration={1} animateOnce={true}>
                 <Row>
                     <Col className={classes.KindWordsColumn} xs={12} lg={6}>
                         <div>

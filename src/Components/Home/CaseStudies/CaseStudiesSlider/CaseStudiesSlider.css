@@ -32,6 +32,11 @@
     text-align: left;
 }
 
+.CaseStudiesDescription a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .SliderRow {
     padding: 30px 0;
     margin: auto;
