@@ -57,11 +57,14 @@
     color: #fff;
 }
 
+@media only screen and (min-width: 768px) {
+    :global .Projects__Projects__36TK6 ul + div {
+        background-color: #C0345E !important;
+    }
+}
+
 @media only screen and (min-width: 991px) {
     .UnleashColumn {
         padding: 8vw;
-    }
-    :global .Projects__Projects__36TK6 ul + div {
-        background-color: #C0345E !important;
     }
 }
