@@ -46,9 +46,9 @@ const Capable = () => {
                                             <a href="/">Brand Strategy <BsChevronRight className={brandStrategyClasses.join(' ')}/>
                                                 <div className={brandStrategyDropdownClasses.join(' ')}>
                                                     <ul>
-                                                        <li><a href="/">Brand Strategy Item</a></li>
-                                                        <li><a href="/">And Another</a></li>
-                                                        <li><a href="/">Have another</a></li>
+                                                        <li>Brand Strategy Item</li>
+                                                        <li>And Another</li>
+                                                        <li>Have another</li>
                                                     </ul>
                                                 </div>
                                             </a>

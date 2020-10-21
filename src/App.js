@@ -8,7 +8,6 @@ import BackToTop from './Components/UI/BackToTop/BackToTop';
 import Spinner from './Components/UI/Spinner/Spinner';
 const HomePage = lazy(() => import('./Containers/HomePage/HomePage'));
 
-
 const App = () => {
 	return (
 		<Suspense fallback={<Spinner fontSize="6px"/>}>
