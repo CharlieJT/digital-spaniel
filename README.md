@@ -16,6 +16,10 @@ The application can be found at [https://digital-spaniel-charlie-jt.netlify.app/
 - [**Back To Top Icon**](#back-to-top-icon)
 
 
+## Overview
+
+The Website was designed to give a fluent & professional look & feel to it within each part & provide the best possible usability for the user. The font "Mentserrat" was chosen as I feel that this font really helps provide that look & feel. 
+
 ## Navbar
 
 When arriving on the website, the navbar will be displayed with a Navbar Logo on the left-hand side which will navigate you to the home page & on the right-hand side will be nav items on the on desktop & a hamburger icon on mobile. This can hide when a user scrolls down the page & will re-appear when a user starts scrolling back up. When at the very top of the page, the Navbar background will transition to have a transparent background.
@@ -31,7 +35,7 @@ The desktop display shows nav items on the right-hand side & a white underline w
 
 ## Unleash Section
 
-The Unleash text will slide in when a user is presented with the website, This will show different coloured text & an active state on "Let's talk" which will animate a pink underline when hovered over. On the other side is a picture of a spaniel. Each of the two parts will be one of top of the other on a mobile & tablet display & side by side on desktop.
+The Unleash text will slide in when a user is presented with the website, This will show different coloured text & an active state on "Let's talk" which will animate a pink underline when hovered over. On the other side is a picture of a spaniel. Each of the two parts will be one of top of the other on a mobile & tablet display & side by side on a desktop display.
 
 
 ## What are we capable of
@@ -41,17 +45,17 @@ The "What are we capable of" section will slide in when a user scrolls to it. Th
 
 ## Some of our recent projects
 
-The "Some of our recent projects" section will slide in when a user scrolls to it. In this section, you will be presented with a tab section with "All" set to default. You can flick between each of the categories by clicking on the heading, the pink underline will trail to that specific tab heading. Each of the projects have their own category so will work just like a real category section & will show the relevent category for each tab selected. You can also hover over each of the items & it will show an active state for each project. Also there is a "See all work" label that has an animated underline when hovered over. The button's are there primary for hover effect only.
+The "Some of our recent projects" section will slide in when a user scrolls to it. In this section, you will be presented with a tab section with "All" set to default. You can flick between each of the categories by clicking on the heading, the pink underline will trail to that specific tab heading. Each of the projects has its own category so will work just like a real category section & will show the relevant category for each tab selected. You can also hover over each of the items & it will show an active state for each project. Also, there is a "See all work" label that has an animated underline when hovered over. The buttons are there primarily for hover effect only.
 
 
 ## Case Studies
 
-The "Case Studies" section will slide in when a user scrolls to it. You will have the ability to be able to slide from each different case studies using a slick slider, you can either scroll to each of case studies by dragging or you can use the arrows that have been provided. This is slightly different from the original design & each of the images are the same but this is to demonstrate it in a working slider. Also, I think the mobile & tablet display could definately be improved but it's the best approach I could think of for the images that were provided.
+The "Case Studies" section will slide in when a user scrolls to it. You will have the ability to be able to slide from each different case studies using a slick slider, you can either scroll to each of case studies by dragging or you can use the arrows that have been provided. This is slightly different from the original design & each of the images are the same but this is to demonstrate it in a working slider. Also, I think the mobile & tablet display could definitely be improved but it's the best approach I could think of for the images that were provided.
 
 
 ## What are we all about
 
-The "What are we all about" section will slide in when a user scrolls to it. You will be presented with a masonry gallery effect. This has been implemented with the help of bootstrap & is also responsive. There is a "About" & a "Careers" label that has an animated underline when hovered over.
+The "What are we all about" section will slide in when a user scrolls to it. You will be presented with a masonry gallery effect. This has been implemented with the help of bootstrap & is also responsive. There is an "About" & a "Careers" label that has an animated underline when hovered over.
 
 
 ## Kind words from our clients
@@ -65,4 +69,4 @@ The "Footer" section will slide in when a user scrolls to it. This has been sect
 
 ## Back To Top Icon
 
-I know this wasn't on the scope but I thought it would be nice to add a "Back to top" Icon to the top of the page, it create a much better UI/UX. This has been styled so that it will disappear when a user is at the top of the page & will animate back in when the user scrolls down the page. When hovered over, it will also animate a dark blue border. This will also smooth scroll back to the top to prevent clunkiness.
+I know this wasn't on the scope but I thought it would be nice to add a "Back to top" Icon to the top of the page, it creates a much better UI/UX. This has been styled so that it will disappear when a user is at the top of the page & will animate back in when the user scrolls down the page. When hovered over, it will also animate a dark blue border. This will also smooth scroll back to the top to prevent clunkiness.
