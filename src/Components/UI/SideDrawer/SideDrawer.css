@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .SideDrawer {
     position: absolute;
     background-color: #fff;
@@ -6,17 +13,26 @@
     width: 102vw;
     margin-top: 10px;
     background-color: #19293A;
-    box-shadow: 1px 1px 5px #1b1b1b;
+    -webkit-box-shadow: 1px 1px 5px #1b1b1b;
+            box-shadow: 1px 1px 5px #1b1b1b;
+    -webkit-transition: opacity 400ms ease-in, -webkit-transform 400ms ease-in;
+    transition: opacity 400ms ease-in, -webkit-transform 400ms ease-in;
+    -o-transition: transform 400ms ease-in, opacity 400ms ease-in;
     transition: transform 400ms ease-in, opacity 400ms ease-in;
+    transition: transform 400ms ease-in, opacity 400ms ease-in, -webkit-transform 400ms ease-in;
 }
 
 .Close {
-    transform: translateX(100vw);
+    -webkit-transform: translateX(100vw);
+        -ms-transform: translateX(100vw);
+            transform: translateX(100vw);
     opacity: 0;
 }
 
 .Open {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
 }
 

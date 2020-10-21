@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .Hamburger {
     cursor: pointer;
     padding: 10px;
@@ -15,7 +22,11 @@
     border-radius: 1px;
     width: 30px;
     background-color: #4a4a4f;
+    -webkit-transition: width 300ms ease-in, top 300ms ease-in, -webkit-transform 300ms ease-in;
+    transition: width 300ms ease-in, top 300ms ease-in, -webkit-transform 300ms ease-in;
+    -o-transition: transform 300ms ease-in, width 300ms ease-in, top 300ms ease-in;
     transition: transform 300ms ease-in, width 300ms ease-in, top 300ms ease-in;
+    transition: transform 300ms ease-in, width 300ms ease-in, top 300ms ease-in, -webkit-transform 300ms ease-in;
 }
 
 .HamburgerIconOneClose {
@@ -32,7 +43,9 @@
 
 .HamburgerIconOneOpen {
     top: 1px;
-    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotateZ(45deg);
 }
 
 .HamburgerIconTwoOpen {
@@ -41,5 +54,7 @@
 
 .HamburgerIconThreeOpen {
     top: -2px;
-    transform: rotateZ(-45deg);
+    -webkit-transform: rotateZ(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotateZ(-45deg);
 }

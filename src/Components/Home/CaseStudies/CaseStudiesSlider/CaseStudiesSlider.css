@@ -1,13 +1,28 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 :global .CaseStudies__CaseStudies__9Uit6 .slick-arrow {
     position: absolute;
     z-index: 1;
     top: -45px;
+    width: 38px;
+    height: 38px;
 }
 
 :global .slick-center .CaseStudiesSlider__SliderRow__3nq5M {
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
     z-index: 10;
+    -webkit-transition: -webkit-transform 200ms ease-in;
+    transition: -webkit-transform 200ms ease-in;
+    -o-transition: transform 200ms ease-in;
     transition: transform 200ms ease-in;
+    transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
 }
 
 
@@ -17,11 +32,11 @@
 }
 
 :global .CaseStudies__CaseStudies__9Uit6 .slick-prev {
-    left: calc(50% - 30px);
+    left: calc(50% - 40px);
 }
 
 :global .CaseStudies__CaseStudies__9Uit6 .slick-next {
-    right: calc(50% - 30px);
+    right: calc(50% - 40px);
 }
 
 .CaseStudiesDescription {
@@ -55,6 +70,8 @@
     border-bottom: solid 2px #fff;  
     width: 0;
     color: #fff;
+    -webkit-transition: width 250ms ease-in-out;
+    -o-transition: width 250ms ease-in-out;
     transition: width 250ms ease-in-out;
 }
 

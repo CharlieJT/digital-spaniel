@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .NavbarItem, .NavbarItem:hover { 
     color: #fff;
     display: inline-block;
@@ -11,12 +18,20 @@
     display: block;
     content: '';
     border-bottom: solid 2px #fff;  
-    transform: scaleX(0);  
-    transition: transform 250ms ease-in-out;
+    -webkit-transform: scaleX(0);  
+        -ms-transform: scaleX(0);  
+            transform: scaleX(0);  
+    -webkit-transition: -webkit-transform 250ms ease-in-out;  
+    transition: -webkit-transform 250ms ease-in-out;  
+    -o-transition: transform 250ms ease-in-out;  
+    transition: transform 250ms ease-in-out;  
+    transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 .NavbarItem:hover:after {
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
 }
 
 @media only screen and (min-width: 992px) {

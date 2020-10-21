@@ -1,14 +1,30 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 :global .slick-center .KindWordsSlider__TestimonialCard__1vm7p {
     background-color: #19293A;
     color: #fff;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px #344657;
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-box-shadow: 0 0 10px #344657;
+            box-shadow: 0 0 10px #344657;
+    -webkit-transition: background-color 200ms ease-in, color 200ms ease-in, -webkit-transform 200ms ease-in;
+    transition: background-color 200ms ease-in, color 200ms ease-in, -webkit-transform 200ms ease-in;
+    -o-transition: background-color 200ms ease-in, color 200ms ease-in, transform 200ms ease-in;
     transition: background-color 200ms ease-in, color 200ms ease-in, transform 200ms ease-in;
+    transition: background-color 200ms ease-in, color 200ms ease-in, transform 200ms ease-in, -webkit-transform 200ms ease-in;
     z-index: 10; 
 }
 
 :global .slick-dots li button:before {
     font-size: 14px;
+    -webkit-transition: font-size 200ms ease-in;
+    -o-transition: font-size 200ms ease-in;
     transition: font-size 200ms ease-in;
 }
 
@@ -78,6 +94,8 @@
 
 @media only screen and (min-width: 992px) {
     :global .slick-center .KindWordsSlider__TestimonialCard__1vm7p {
-        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1);
     }
 }

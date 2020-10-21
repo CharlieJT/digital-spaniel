@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .Navbar {
     position: fixed;
     width: 100%;
@@ -5,6 +12,8 @@
     top: 0;
     z-index: 200;
     background-color: #fff;
+    -webkit-transition: background-color 300ms ease-in, top 300ms ease-in;
+    -o-transition: background-color 300ms ease-in, top 300ms ease-in;
     transition: background-color 300ms ease-in, top 300ms ease-in;
 }
   
@@ -14,6 +23,8 @@
 
 .NavbarLogo {
     float: left;
+    -webkit-transition: height .3s ease-in;
+    -o-transition: height .3s ease-in;
     transition: height .3s ease-in;
 }
 

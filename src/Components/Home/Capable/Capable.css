@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .Capable {
     background-color: #EDEFF1;
 }
@@ -33,11 +40,17 @@
     color: #fff;
     border-radius: 50%;
     margin-left: 10px;
+    -webkit-transition: -webkit-transform 200ms ease-in;
+    transition: -webkit-transform 200ms ease-in;
+    -o-transition: transform 200ms ease-in;
     transition: transform 200ms ease-in;
+    transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
 }
 
 .CapableChevronActive {
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 
 .BrandStrategyDropdown {
@@ -46,10 +59,13 @@
     width: 200px;
     height: 0px;
     opacity: 0;
+    -webkit-transition: height 200ms ease-in, opacity 200ms ease-in;
+    -o-transition: height 200ms ease-in, opacity 200ms ease-in;
     transition: height 200ms ease-in, opacity 200ms ease-in;
     pointer-events: none;
     padding: 10px;
-    box-shadow: 2px 2px 5px #506473;
+    -webkit-box-shadow: 2px 2px 5px #506473;
+            box-shadow: 2px 2px 5px #506473;
 }
 
 .BrandStrategyDropdown>ul {
@@ -84,6 +100,8 @@
     border-bottom: solid 2px #C0345E;  
     width: 0;
     color: #19293A;
+    -webkit-transition: width 250ms ease-in-out;
+    -o-transition: width 250ms ease-in-out;
     transition: width 250ms ease-in-out;
 }
 

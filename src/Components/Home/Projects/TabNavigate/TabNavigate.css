@@ -1,7 +1,21 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .ImageOverlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     position: absolute;
     left: 8px;
     right: 8px;
@@ -12,10 +26,14 @@
     color: #fff;
     padding: 10px;
     padding-bottom: 0;
+    -webkit-transition: background 200ms ease-in, opacity 200ms ease-in, padding 200ms ease-in, height 200ms ease-in;
+    -o-transition: background 200ms ease-in, opacity 200ms ease-in, padding 200ms ease-in, height 200ms ease-in;
     transition: background 200ms ease-in, opacity 200ms ease-in, padding 200ms ease-in, height 200ms ease-in;
 }
 
 .ImageOverlayActive {
+    background: -webkit-gradient( linear, left top, left bottom, from(#19293A1A), to(#19293A));
+    background: -o-linear-gradient( #19293A1A, #19293A);
     background: linear-gradient( #19293A1A, #19293A);
     opacity: 1;
     height: 94%;
@@ -41,6 +59,8 @@
     border-bottom: solid 2px #fff;  
     width: 0;
     color: #19293A;
+    -webkit-transition: width 250ms ease-in-out;
+    -o-transition: width 250ms ease-in-out;
     transition: width 250ms ease-in-out;
 }
 
