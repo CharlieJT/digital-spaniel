@@ -65,9 +65,12 @@ const TabNavigate = () => {
     }
 
     // Data held for each project item in the tabs section
+    // I also understand it's not good practice to add id's in manually like this as you would need to adjust all id's after a project
+    // you wanted to add but didn't want to add to the end of the array.
 
     const tabsNavigateData = [
         {
+            id: 1,
             title: "Whellies",
             xsDisplay: 12,
             smDisplay: 6,
@@ -80,6 +83,7 @@ const TabNavigate = () => {
             category: "Web Design"
         },
         {
+            id: 2,
             title: "Make Ideas Happen",
             xsDisplay: 12,
             smDisplay: 6,
@@ -92,6 +96,7 @@ const TabNavigate = () => {
             category: "Digital Marketing"
         },
         {
+            id: 3,
             title: "Tescos Finest",
             xsDisplay: 12,
             smDisplay: 6,
@@ -104,6 +109,7 @@ const TabNavigate = () => {
             category: "Branding"
         },
         {
+            id: 4,
             title: "Dinamo",
             xsDisplay: 12,
             smDisplay: 12,
@@ -116,6 +122,7 @@ const TabNavigate = () => {
             category: "Web Design"
         },
         {
+            id: 5,
             title: "Rider",
             xsDisplay: 12,
             smDisplay: 6,
@@ -146,10 +153,10 @@ const TabNavigate = () => {
                     <Container>
                         <Row>
                             {tabsNavigateData.map(TabDataItem => {
-                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image } = TabDataItem;
+                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image, id } = TabDataItem;
                                 return (
                                     <Col
-                                        key={title}
+                                        key={id}
                                         xs={xsDisplay} 
                                         sm={smDisplay} 
                                         lg={lgDisplay} 
@@ -178,9 +185,9 @@ const TabNavigate = () => {
                 <Container>
                         <Row>
                             {tabsNavigateData.map(TabDataItem => {
-                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image, category } = TabDataItem;
+                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image, category, id } = TabDataItem;
                                 return (
-                                    <Aux key={title}>
+                                    <Aux key={id}>
                                         {category === "Branding" ?
                                         <Col
                                             key={title}
@@ -213,9 +220,9 @@ const TabNavigate = () => {
                     <Container>
                         <Row>
                             {tabsNavigateData.map(TabDataItem => {
-                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image, category } = TabDataItem;
+                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image, category, id } = TabDataItem;
                                 return (
-                                    <Aux key={title}>
+                                    <Aux key={id}>
                                         {category === "Web Design" ?
                                         <Col
                                             key={title}
@@ -248,9 +255,9 @@ const TabNavigate = () => {
                     <Container>
                         <Row>
                             {tabsNavigateData.map(TabDataItem => {
-                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image, category } = TabDataItem;
+                                const { xsDisplay, smDisplay, lgDisplay, mouseEnter, mouseLeave, tabClass, title, overlayText, image, category, id } = TabDataItem;
                                 return (
-                                    <Aux key={title}>
+                                    <Aux key={id}>
                                         {category === "Digital Marketing" ?
                                         <Col
                                             key={title}

@@ -11,8 +11,10 @@ const App = () => {
 	return (
 		<div className={classes.App}>
 			<Layout>
+				{/* Typically in a larger Application with more pages, the routing would be done here using React Router */}
 				<HomePage />
 			</Layout>
+			{/* Back to top icon which when clicked, will navigate the user back to the top of the page */}
 			<BackToTop />
 		</div>
 	);

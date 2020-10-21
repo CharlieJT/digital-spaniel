@@ -44,7 +44,6 @@ const AllAbout = () => {
                     </Row>
                 </ScrollAnimation>
             </Container>
-            
         </Container>
     );
 }

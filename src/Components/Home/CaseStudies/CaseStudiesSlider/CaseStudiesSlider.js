@@ -36,6 +36,8 @@ class CaseStudiesSlider extends Component {
             },
         ];
 
+        // Slider settings to help with usability
+
         const settings = {
             arrows: true,
             infinite: true,

@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './NavbarItem.css';
 
 const NavbarItem = ({ name, link, display, clicked, colour }) => {
+    // The styling done for a single navbar item
     return (
         <a 
             href={link} 

@@ -2,6 +2,9 @@ import React from 'react';
 import classes from './Hamburger.css';
 
 const Hamburger = ({ clicked, open }) => {
+
+    // Hamburger icons which check the prop state "open" to append a certain class to the classes array & style the burger icon accordingly
+
     let iconOneClass = [classes.HamburgerIconOne, classes.HamburgerIconOneClose];
     let iconTwoClass = [classes.HamburgerIconTwo, classes.HamburgerIconTwoClose];
     let iconThreeClass = [classes.HamburgerIconThree, classes.HamburgerIconThreeClose];

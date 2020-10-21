@@ -6,6 +6,10 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 const Capable = () => {
 
+    // brand strategy state to detect when the "brand strategy" item has been hovered over, for every time it's hovered over, the state will change to true
+    // and everytime the mouse leaves, it will change back to false. This is being used to apend a class name to an array & remove it depending on the state
+    // and style a dropdown menu accordingly
+
     const [brandStrategyState, setBrandStrategyState] = useState(false)
 
     const brandStrategyMouseOver = () => setBrandStrategyState(true);
